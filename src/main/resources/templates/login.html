@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       <main>
+        <div class="Container-Register-Login">
+        <div class="Register-Form">
+    <form action ="/logincheck" method="POST" enctype="application/x-www-form-urlencoded" class="Register-Form-F">
+         
+        <p th:if="${error != null}" th:text="${error}" style="color:red"></p>
+        <p th:if="${logout != null}" th:text="${logout}" style="color:red"></p>
+        
+        <label for="username"class="Register-P">Nombre de usuario</label> <br>
+        <input type="text" id="username" name="username" class="Register-I"> <br>
+        <label for="email"class="Register-P">Email</label> <br>
+        <input type="email" id="email" name="email" class="Register-I"> <br>
+        <label for="password" class="Register-P">Contraseña</label> <br> 
+        <input type="password" id="username" name="password" class="Register-I"> <br>    
+        
+        
+        <button type="submit"class="Register-B">Enviar</button>                           
+        <button type="reset"class="Register-B">Borrar</button>
+    </div>
+
+    <div><img src="" alt=""></div>
+
+        <div class="Log-Link">
+            <p class="Register-P">¿No tenes una cuenta todavia?</p>
+            <button class="Register-B"><a href="/auth/register">Registrate</a></button>
+        </div>
+
+        
+
+    </div>
+    </main>
+    </body>
+</html>

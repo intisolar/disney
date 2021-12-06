@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <main>
+        <div class="">
+        <div class="">
+    <form action ="/register-new-user" method="POST" enctype="multipart/form-data" class="">
+        
+        <p th:if="${error != null}" th:text="${error}"></p>
+        
+        <label for="username" class="">Nombre de usuario</label> <br> 
+        <input type="text" id="username" name="username" class="" th:value="${username}"> <br>            
+        <label for="email" class="">Email</label> <br>
+        <input type="email" id="email" name="email" class="" th:value="${email}"> <br>
+        <label for="pass1" class="">Contraseña</label> <br> 
+        <input type="password" id="pass1" name="pass1" class="" th:value="${pass1}"> <br>    
+        <label for="pass2" class="">Confirmar contraseña</label> <br> 
+        <input type="password" id="pass2" name="pass2" class="" th:value="${pass2}"> <br>
+ 
+
+        
+        
+        <button type="submit" class="">Enviar</button>                           
+        <button type="reset" class="">Borrar</button>
+    </div>
+
+   
+
+        <div class="Log-Link">
+            <p class="">¿Ya tenés una cuenta?</p>
+            <button class=""><a href="/auth/login">Log In</a></button>
+        </div>
+
+        
+
+    </div>
+    </main>
+    </body>
+</html>
